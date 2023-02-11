@@ -8,11 +8,20 @@
 a {
     text-decoration: none;
 }
+.navbar-wrap{
+    background-color: #090e12;
+}
+.navbar-row{
+    padding: 2% 10%;
+}
+.logo img{
+    width: 200px;
+}
 
 .page-wrap {
     background: linear-gradient(90deg, rgba(17,27,33,1) 70%, rgba(11,20,26,1) 70%);
-    height: 100vh;
-    padding: 5% 10% !important;
+    height: auto;
+    padding: 9% 10% !important;
     display: flex;
     align-items: center;
     
