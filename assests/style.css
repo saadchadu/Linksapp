@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0 !important;
+    padding: 0;
+    font-family: mulish;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-wrap {
+    background: linear-gradient(90deg, rgba(17,27,33,1) 70%, rgba(11,20,26,1) 70%);
+    height: 100vh;
+    padding: 5% 10% !important;
+    display: flex;
+    align-items: center;
+    
+}
+.page-wrap .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-col h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.3em;
+    padding-right: 13%;
+
+}
+.text-col p {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3em;
+    padding-right: 10%;
+    padding-top: 3%;
+
+}
+.hero-lighlight-text {
+    color: #25D366;
+}
+.input-col{
+    padding: 0 6% !important;
+}
+.input-box{
+    background-color: white;
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+    padding: 5%;
+    border-radius: 16px;
+}
+.input-box label{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: #303030;
+    padding-bottom: 2%;
+}
+.input-box .label2{
+    padding: 2% 0 !important;
+}
+.input-box input{
+    width: 100%;
+    padding: 2%  !important;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #ececec;
+    border: 3px solid #c9c9c9;
+}
+.input-box textarea{
+    width: 100%;
+    padding: 2%  !important;
+    border-radius: 10px;
+    background-color: #ececec;
+    border: 3px solid #c9c9c9;
+}
+.buttons-row{
+    display: flex;
+    justify-content: space-between;
+    padding-top:2% ;
+}
+.input-box button{
+    width: 49%;
+}
+.generate-btn{
+    background: #25D366;
+border-radius: 10px;
+border: none;
+padding: 4%;
+font-size: 18px;
+font-weight: 600;
+}
+.copy-btn{
+    border-radius: 10px;
+border: none;
+padding: 4%;
+background-color: #111b21;;
+}
+.copy-btn svg{
+    stroke: white;
+}
