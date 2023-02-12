@@ -37,25 +37,29 @@
                         <img src="assests/logo/Linksapp-Logo-white.svg" alt="" srcset="">
                     </div>
                 </div>
-                <div class="col-6"></div>
+                <div class="col-6 menu-col">
+                    <div class="menu-links">
+                        <a href="mailto:cleffongraphics@gmail.com" class="glow-on-hover contact-btn">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section>
         <div class="container-fluid page-wrap">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="text-col">
                         <h1>Generate <span class="hero-lighlight-text">WhatsApp Short Link</span> Easier Never Before</h1>
                         <p>Easily create a custom WhatsApp link with a pre-written message and share it on your social media platforms with your audience.</p>
                     </div>
                 </div>
-                <div class="col-md-6 input-col">
+                <div class="col-md-5 input-col">
                     <div class="input-box">
-                        <label>Enter Your Whatsapp Number</label>
-                        <input id="phoneNumber" type="tel">
-                        <label class="label2">Enter Your Whatsapp Number</label>
-                        <textarea  name="" id="" cols="30" rows="6"></textarea>
+                        <label>Number</label>
+                        <input id="phoneNumber" type="tel" placeholder="Enter Your Whatsapp Number">
+                        <label class="label2">Custom Message</label>
+                        <textarea  name="" id="" cols="30" rows="4" placeholder="Add a custom message that users will send to you"></textarea>
                         <div class="buttons-row">
                             <button onclick="generateLink()" id="generate-btn" class="generate-btn">Generate & Copy Link    </button>
                         </div>

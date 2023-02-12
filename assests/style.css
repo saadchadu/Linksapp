@@ -6,7 +6,7 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .navbar-wrap{
     background-color: #090e12;
@@ -17,11 +17,78 @@ a {
 .logo img{
     width: 200px;
 }
+.menu-col{
+    text-align: right;
+}
+.contact-btn{
+    padding: 8px 40px 10px !important;
+    border-radius: 70px !important;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    /* background: linear-gradient(90deg, #055aa6 0%, #e6333f 100%); */
+    background-color: #1d2b33;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+.contact-btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 70px !important;
+}
+
+.contact-btn:active {
+    color: #000
+}
+
+.contact-btn:active:after {
+    background: transparent;
+}
+
+.contact-btn:hover:before {
+    opacity: 1;
+}
+.contact-btn:hover{
+    color: white !important;
+}
+.contact-btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 70px !important;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
 
 .page-wrap {
-    background: linear-gradient(90deg, rgba(17,27,33,1) 70%, rgba(11,20,26,1) 70%);
+    background: linear-gradient(90deg, rgba(17,27,33,1) 75%, rgba(11,20,26,1) 75%);
     height: auto;
-    padding: 9% 10% !important;
+    padding: 10% 10% !important;
     display: flex;
     align-items: center;
     
@@ -53,20 +120,34 @@ a {
     color: #25D366;
 }
 .input-col{
-    padding: 0 6% !important;
+    padding: 0 0 0 3% !important;
 }
 .input-box{
     background-color: white;
     display: flex;  
     justify-content: center;
     flex-direction: column;
-    padding: 5%;
+    padding: 12% 6% 6%;
     border-radius: 16px;
+    position: relative;
+}
+.input-box::before{
+    content: url(/assests/logo/Logo-icon.svg);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -40px;
+    padding: 2%;
+    background-color: white;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: #efefef 0px 6px 5px 0px;
 }
 .input-box label{
     text-align: left;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     color: #303030;
     padding-bottom: 2%;
 }
@@ -75,18 +156,23 @@ a {
 }
 .input-box input{
     width: 100%;
-    padding: 2%  !important;
+    padding: 3% !important;
     height: 60px;
     border-radius: 10px;
     background-color: #ececec;
-    border: 3px solid #c9c9c9;
+    border: none ;
 }
 .input-box textarea{
     width: 100%;
-    padding: 2%  !important;
+    padding: 3% !important;
     border-radius: 10px;
     background-color: #ececec;
-    border: 3px solid #c9c9c9;
+    border: none ;
+}
+.input-box ::placeholder{
+    font-size: 14px;
+    font-weight: 600;
+    color: #717171;
 }
 .buttons-row{
     display: flex;
