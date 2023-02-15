@@ -61,7 +61,13 @@
                         <label class="label2">Custom Message</label>
                         <textarea  name="" id="" cols="30" rows="4" placeholder="Add a custom message that users will send to you"></textarea>
                         <div class="buttons-row">
-                            <button onclick="generateLink()" id="generate-btn" class="generate-btn">Generate & Copy Link    </button>
+                            <button onclick="generateLink()" id="generate-btn" class="generate-btn">Generate</button>
+                            <button onclick="previewLink()" id="preview-btn" class="preview-btn">Preview</button>
+                        </div>
+                        <label class="label2">Here Is Your Link</label>
+                        <div class="link-box">
+                            <p class="link" id="link" ></p>
+                            <a href="#"><img class="copy-btn" id="copy-btn" src="assests/copy.svg" alt="" srcset=""></a>
                         </div>
                     </div>
                 </div>
