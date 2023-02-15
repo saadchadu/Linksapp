@@ -17,7 +17,6 @@ function generateLink() {
     let removeSpace = end_url.replace(/ /g, "%20");
     end_url = removeSpace;
     link.innerHTML = end_url;
-    console.log(end_url);
 
 }
 
@@ -36,15 +35,17 @@ function previewLink(){
 // const url = 'https://example.com'; // replace with your desired URL
 
 
+function copyLink(){
+    let number = phoneNumberInput.value;
+    let message = textBox.value;
+    let url = "https://api.whatsapp.com/send?phone=";
+    let end_url = `${url}${number}&text=${message}`;
+    let removeSpace = end_url.replace(/ /g, "%20");
+    end_url = removeSpace;
+    navigator.clipboard.writeText(end_url).then(() => {
+        alert("Copied to clipboard");
+    });
+}
 
-// navigator.clipboard.writeText(end_url).then(() => {
-//     alert("Copied to clipboard");
-// });
 
 
-
-
-const fontSize = parseInt(getComputedStyle(link).fontSize);
-const numLines = 1; // number of lines to display
-const lineHeight = `${numLines * fontSize}px`;
-link.style.lineHeight = lineHeight;
