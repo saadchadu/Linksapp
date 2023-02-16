@@ -104,7 +104,7 @@ a {
 .page-wrap {
     background: linear-gradient(90deg, rgba(17, 27, 33, 1) 75%, rgba(11, 20, 26, 1) 75%);
     height: auto;
-    padding: 10% 10% !important;
+    padding: 6% 10% !important;
     display: flex;
     align-items: center;
 
@@ -187,6 +187,85 @@ a {
     border: none;
     font-weight: 700;
     letter-spacing: 1px;
+
+}
+
+.shake {
+    animation: shake 150ms 2 linear;
+    -moz-animation: shake 150ms 2 linear;
+    -webkit-animation: shake 150ms 2 linear;
+    -o-animation: shake 3000ms 5 linear;
+    outline: 2px solid red !important;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(10px, 0);
+    }
+
+    50% {
+        transform: translate(-10 px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@-moz-keyframes shake {
+    0% {
+        -moz-transform: translate(3px, 0);
+    }
+
+    50% {
+        -moz-transform: translate(-3px, 0);
+    }
+
+    100% {
+        -moz-transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes shake {
+    0% {
+        -webkit-transform: translate(3px, 0);
+    }
+
+    50% {
+        -webkit-transform: translate(-3px, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
+@-ms-keyframes shake {
+    0% {
+        -ms-transform: translate(3px, 0);
+    }
+
+    50% {
+        -ms-transform: translate(-3px, 0);
+    }
+
+    100% {
+        -ms-transform: translate(0, 0);
+    }
+}
+
+@-o-keyframes shake {
+    0% {
+        -o-transform: translate(3px, 0);
+    }
+
+    50% {
+        -o-transform: translate(-3px, 0);
+    }
+
+    100% {
+        -o-transform: translate(0, 0);
+    }
 }
 
 .input-box textarea {
@@ -284,4 +363,75 @@ a {
 
 .copy-btn svg {
     stroke: rgb(255, 255, 255);
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #1bd741;
+    color: #fff;
+    text-align: center;
+    border-radius: 13px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 30px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
 }
