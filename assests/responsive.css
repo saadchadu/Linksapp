@@ -28,4 +28,18 @@
         padding-left: 0 !important;
         padding-top: 22% !important;
     }
+    .link-box{
+        overflow: hidden;
+        height: 70px;
+    }
+    .link{
+        overflow: hidden;
+        white-space: pre-wrap;
+    }
+    .link:hover {
+        animation: none;
+    }
+    .copy-btn{
+        right: 2%;
+    }
 }
