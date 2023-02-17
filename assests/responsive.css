@@ -24,6 +24,10 @@
         padding-right: 0;
         text-align: center;
     }
+    .buymeacoffee{
+        display: flex;
+    justify-content: center;
+    }
     .input-col{
         padding-left: 0 !important;
         padding-top: 22% !important;
